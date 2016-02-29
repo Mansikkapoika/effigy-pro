@@ -1,0 +1,16 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/************************************************************************************
+ desktop layout (larger than 1200): common settings for wide desktop screen
+*************************************************************************************/
+@media only screen and (min-width: 1200px) {
+	#jsn-topheader,
+	#jsn-page,
+	#jsn-pos-topbar,
+	#jsn-header.jsn-menu-sticky {
+		width: 1170px;
+	}
+}

@@ -1,0 +1,102 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/* ========== SOCIAL - ICON ========== */
+#jsn-social-icons ul {
+	margin: 0;
+	text-align: right;
+	position: relative;
+}
+#jsn-social-icons ul:after {
+	background: rgba(255,255,255,.4);
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 22px;
+	top: 50%;
+	margin-top: -11px;
+	right: -7px;
+}
+#jsn-social-icons ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+}
+#jsn-social-icons ul li a {
+	display: inline-block;
+	text-indent: -999em;
+	background-image: url(../images/icons/icons-social.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	word-wrap:normal;
+	text-align: left;
+}
+#jsn-social-icons ul li:hover a {
+	background-color: rgba(0,0,0,0.2);
+}
+#jsn-social-icons ul li.facebook a {
+	background-position: 0 0;
+}
+#jsn-social-icons ul li.twitter a {
+	background-position: 0 -32px;
+}
+#jsn-social-icons ul li.googleplus a {
+	background-position: 0 -64px;
+}
+#jsn-social-icons ul li.youtube a {
+	background-position: 0 -96px;
+}
+#jsn-social-icons ul li.pinterest a {
+	background-position: 0 -128px;
+}
+#jsn-social-icons ul li.myspace a {
+	background-position: 0 -160px;
+}
+#jsn-social-icons ul li.flickr a {
+	background-position: 0 -192px;
+}
+#jsn-social-icons ul li.dribble a {
+	background-position: 0 -224px;
+}
+#jsn-social-icons ul li.stumbleupon a {
+	background-position: 0 -256px;
+}
+#jsn-social-icons ul li.yahoo a {
+	background-position: 0 -288px;
+}
+#jsn-social-icons ul li.skype a {
+	background-position: 0 -320px;
+}
+#jsn-social-icons ul li.rss a {
+	background-position: 0 -352px;
+}
+#jsn-social-icons ul li.linkedin a {
+	background-position: 0 -384px;
+}
+@media only screen and (max-width: 960px), (max-device-width: 960px) {
+	#jsn-social-icons ul:after {
+		display: none;
+	}
+}
+/* ========== RTL - LANGUAGE ========== */
+body.jsn-direction-rtl #jsn-social-icons ul {
+    text-align: left;
+}
+body.jsn-direction-rtl #jsn-social-icons ul:after {
+	right: auto;
+	left: -10px;
+}
+body.jsn-direction-rtl #jsn-social-icons ul li a {
+	text-indent: 999em;
+}

@@ -1,0 +1,148 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/* ============================== DEFAULT HTML ============================== */
+a,
+#jsn-pos-content-bottom div[class*="lightbox-"] .link-action {
+	color: #aaa;
+}
+/* ============================== LAYOUT ============================== */
+/* =============== LAYOUT - OVERALL PAGE =============== */
+#jsn-master {
+	background-color: #aaa;
+}
+#jsn-content-bottom {
+	background: #333;
+}
+/* ============================== TYPOGRAPHY ============================== */
+/* =============== TYPOGRAPHY - LINK STYLES =============== */
+/* =============== TYPOGRAPHY - TABLE STYLES =============== */
+/* ----- COLOR HEADER TABLE ----- */
+table.style-colorheader thead th {
+	background-color: #333;
+}
+/* ----- COLOR STRIPES TABLE ----- */
+table.style-colorstripes td,
+table.style-colorstripes th {
+	
+}
+
+table.style-colorstripes thead th {
+	background-color: #aaa;
+}
+table.style-colorstripes thead th.highlight {
+	background-color: #333;
+}
+table.style-colorstripes tbody tr {
+	background-color: #aaa;
+}
+table.style-colorstripes tbody tr.odd {
+	background-color: #333;
+}
+table.style-colorstripes tbody tr:hover th,
+table.style-colorstripes tbody tr:hover td {
+	background-color: transparent;
+}
+table.style-colorstripes tfoot th,
+table.style-colorstripes tfoot td {
+	background-color: #aaa;
+}
+table.table-style tbody tr.odd .highlight {
+	background-color: #aaa;
+}
+/* ----- COLOR HEADER TABLE ----- */
+table.style-colorheader thead th.highlight {
+	border:1px solid #fff;
+}
+/* ============================== MENU ============================== */
+/* =============== MENU - MAIN MENU =============== */
+/* ----- 1st LEVEL ----- */
+/* ----- HOVER STATE, ACTIVE STATE ----- */
+div.jsn-modulecontainer ul.menu-mainmenu li:hover > a,
+div.jsn-modulecontainer ul.menu-mainmenu li.active > a {
+	color: #aaa;
+	text-decoration: none;
+}
+/* =============== MENU - SIDE MENU =============== */
+/* ---------- 1st LEVEL ---------- */
+/* ----- HOVER STATE IN SPECIFIC MODULE BOXES ----- */
+div.jsn-modulecontainer ul.menu-sidemenu li:hover > a {
+	color: #aaa;
+}
+/* ----- ACTIVE STATE ----- */
+div.jsn-modulecontainer ul.menu-sidemenu ul li.active > a {
+	color: #aaa;
+}
+/* ----- ACTIVE STATE IN SPECIFIC MODULE BOXES ----- */
+
+/* ============================== MODULE STYLES ============================== */
+/* ----- LIGHTBOX ----- */
+div.lightbox-1 div.jsn-modulecontainer_inner {
+	border-color: #aaa;
+}
+div.lightbox-2 div.jsn-modulecontainer_inner {
+	border-color: #ccc;
+}
+div.lightbox-3 div.jsn-modulecontainer_inner {
+	border-color: #333;
+}
+div.lightbox-1 div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	background-color: #aaa;
+}
+div.lightbox-2 div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	background-color: #ccc;
+}
+div.lightbox-3 div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	background-color: #333;
+}
+/* ----- RICHBOX ----- */
+div.richbox-1 div.jsn-modulecontainer_inner {
+	border-color: #aaa;
+}
+div.richbox-2 div.jsn-modulecontainer_inner {
+	border-color: #ccc;
+}
+div.richbox-3 div.jsn-modulecontainer_inner {
+	border-color: #333;
+}
+div.richbox-1 div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	color: #aaa;
+}
+div.richbox-2 div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	color: #ccc;
+}
+div.richbox-3 div.jsn-modulecontainer_inner h3.jsn-moduletitle {
+	color: #333;
+}
+div.richbox-1 div.jsn-modulecontainer_inner .jsn-modulecontent {
+	background-color: #aaa;
+}
+div.richbox-2 div.jsn-modulecontainer_inner .jsn-modulecontent {
+	background-color: #ccc;
+}
+div.richbox-3 div.jsn-modulecontainer_inner .jsn-modulecontent {
+	background-color: #333;
+}
+/* ----- SOLID ----- */
+div.solid-1 div.jsn-modulecontainer_inner {
+	background-color: #aaa;
+}
+div.solid-2 div.jsn-modulecontainer_inner {
+	background-color: #ccc;
+}
+div.solid-3 div.jsn-modulecontainer_inner {
+	background-color: #333;
+}
+/* ============================== JOOMLA! DEFAULT EXTENSIONS ============================== */
+/* =============== JOOMLA! EXTENSIONS - MOD_SEARCH =============== */
+#jsn-pos-top div.search input#mod_search_searchword {
+	border: 1px solid #333;
+}
+/* =============== JOOMLA! EXTENSIONS - COM_CONTENT =============== */
+/* ----- SECTION / CATEGORY BLOG LAYOUT ----- */
+/* PAGE PAGINATION */
+ul.jsn-pagination li.navigation-page span {
+	background-color: #aaa;
+}

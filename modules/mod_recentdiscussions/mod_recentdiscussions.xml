@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>EasyDiscuss - Recent Discussions</name>
+	<author>StackIdeas</author>
+	<creationDate>18/04/2011</creationDate>
+	<copyright>Copyright 2009 - 2011 Stack Ideas. All rights reserved.</copyright>
+	<license>GPL License</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://www.stackideas.com</authorUrl>
+	<version>3.2.1</version>
+	<description>Displays a recent list of discussions from the site.</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_recentdiscussions.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_recentdiscussions">mod_recentdiscussions.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<!-- <folder>assets</folder> -->
+		<folder>styles</folder>
+		<folder>images</folder>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="filter_option" type="list" default="0" label="Select an option" description="Show all or filter discussion by..">
+			<option value="0">All Categories</option>
+			<option value="1">Selected Category</option>
+			<option value="2">Selected Tags</option>
+			<option value="3">Featured Posts</option>
+		</param>
+		<param name="filter_state" type="list" default="0" label="Select an option" description="Select the state of discussions to display">
+			<option value="0">All Discussions</option>
+			<option value="1">Unanswered</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="category" type="text" default="" label="Category" description="Category ID [Category filter]" />
+		<param name="include_subcategories" type="list" default="1" label="Include Sub-Categories [Category filter]" description="Recursively include sub-categories">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="tags" type="text" default="" label="Tags" description="Tags ID [Tag filter]" />
+
+		<param name="@spacer" type="spacer" default="" label="" description="General Settings" />
+		<param name="count" type="text" default="5" label="Limit" description="The number of items to display (set it to 0 if post limiting if not required)." />
+		<param name="show_avatar" type="list" default="1" label="Show avatar" description="Show discussion starter avatar">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="avatar_size" type="text" default="48" label="Avatar size" description="Height or width in pixel" />
+		<param name="show_content" type="list" default="1" label="Show content" description="Show discussion content">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="show_content_tooltips" type="list" default="0" label="Show content in popup" description="Show discussion contents in a popup rather than in the module itself.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="max_title" type="text" default="50" label="Truncate title" description="Truncate title at this character count" />
+		<param name="max_content" type="text" default="80" label="Truncate content" description="Truncate content at this character count" />
+		<param name="show_footer" type="list" default="1" label="Show footer" description="Show extra details in footer">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+
+	</params>
+
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="filter_option" type="list" default="0" label="Select an option" description="Show all or filter discussion by..">
+					<option value="0">All Categories</option>
+					<option value="1">Selected Category</option>
+					<option value="2">Selected Tags</option>
+					<option value="3">Featured Posts</option>
+				</field>
+				<field name="filter_state" type="list" default="0" label="Select an option" description="Select the state of discussions to display">
+					<option value="0">All Discussions</option>
+					<option value="1">Unanswered</option>
+				</field>
+				<field name="count" type="text" default="5" label="Discussion Count" description="The number of recent discussions to display in the module" size="5" />
+				<field name="show_avatar" type="list" default="1" label="Show avatar" description="Show discussion starter avatar" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="avatar_size" type="text" default="48" label="Avatar size" description="Height or width in pixel" />
+				<field name="show_content" type="list" default="1" label="Show content" description="Show discussion content" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_content_tooltips" type="list" default="0" label="Show content in popup" description="Show discussion contents in a popup rather than in the module itself.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="max_title" type="text" default="50" label="Truncate title" description="Truncate title at this character count" />
+				<field name="max_content" type="text" default="80" label="Truncate content" description="Truncate content at this character count" />
+				<field name="show_footer" type="list" default="1" label="Show footer" description="Show extra details in footer" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="filter_category">
+				<field
+					name="category"
+					type="sql"
+					default="0"
+					label="Discussion Category"
+					description="Filter a discussion category to show"
+					query="SELECT id, title FROM #__discuss_category"
+					key_field="id"
+					value_field="title"
+				/>
+				<field name="include_subcategories" type="list" default="1" label="Include Sub-Categories" description="Recursively include sub-categories">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset name="filter_tags">
+				<field
+					name="tags"
+					type="sql"
+					default="0"
+					label="Discussion Tags"
+					description="Filter a discussion tag to show"
+					query="SELECT id, title FROM #__discuss_tags"
+					key_field="id"
+					value_field="title"
+				/>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+</install>
